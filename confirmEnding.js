@@ -1,7 +1,13 @@
-function confirmEnding(str, target) {
 
-  
-  return (str.slice(str.length - target.length) === target)
+
+function confirmEnding(str, target) {
+  var endOfStr = str.slice(-target.length)
+
+
+  if (endOfStr === target){
+    return true
+  }
+  return false;
 }
 
-confirmEnding("Bastian", "n");
+console.log(confirmEnding("Bastian", "ffn"));
