@@ -1,12 +1,18 @@
-function getIndexToIns(arr, num) {
-  sorted = [];
-  for (i=0; i<arr.length; i++) {
-    if (arr[0] > arr[1]) {
-      sorted = sorted.unshift()
-      return sorted;
-    }
-  }
-  //return num;
+function sortFunction(a,b) { 
+    return a - b
 }
 
-getIndexToIns([40, 60], 50);
+function getIndexToIns(arr, num) {
+	var sorted = arr.sort(sortFunction);
+  // console.log(sorted);
+  
+  if (arr) {
+    for (var i=0; i < arr.length; i++) {
+		  while (sorted[i] >= num) {
+        return i;
+      }
+    }
+  return arr.length
+  }
+}
+getIndexToIns([], 1);

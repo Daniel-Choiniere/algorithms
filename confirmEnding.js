@@ -10,4 +10,4 @@ function confirmEnding(str, target) {
   return false;
 }
 
-console.log(confirmEnding("Bastian", "ffn"));
+console.log(confirmEnding("Bastian", "n"));
