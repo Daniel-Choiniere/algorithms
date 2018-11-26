@@ -4,10 +4,10 @@ function mutation(arr) {
   // console.log(lowercaseArrOne);
   // console.log(lowercaseArrTwo);
   for (var i=0;  i < lowercaseArrTwo.length; i++) {
-    if (lowercaseArrOne.indexOf(lowercaseArrTwo[i]) != -1 )
-      return true;
+    if (lowercaseArrOne.indexOf(lowercaseArrTwo[i]) < 0)
+      return false;
     }
-  return false;
+  return true;
 }
 
-console.log(mutation(["hello", "hey"]));
+mutation(["hello", "hey"]);
